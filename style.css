@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 80%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Largura máxima para a imagem */
+    height: 300px; /* Altura fixa para o contêiner da imagem */
+    overflow: hidden; /* Esconde qualquer parte da imagem que saia do contêiner */
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o contêiner e cortar as bordas excedentes */
+    display: block;
+    overflow: hidden;
+}
+
+.button {
+    position: absolute;
+    background-color: #04AA6D; /* Cor padrão */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+}
+
+#yellow {
+    background-color: yellow;
+    top: 10%;  /* Posiciona o botão 10% abaixo do topo da imagem */
+    left: 10%; /* Posiciona o botão 10% à direita da borda esquerda da imagem */
+}
+
+#red {
+    background-color: red;
+    top: 10%;
+    right: 10%; /* Posiciona o botão 10% à esquerda da borda direita da imagem */
+}
+
+#green {
+    background-color: green;
+    bottom: 10%; /* Posiciona o botão 10% acima da borda inferior da imagem */
+    left: 10%;
+}
+
+#automatic {
+    background-image: linear-gradient(to left, green, yellow, red);
+    bottom: 10%;
+    right: 10%;
+}
